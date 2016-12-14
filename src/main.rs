@@ -1,4 +1,5 @@
 extern crate crypto;
+extern crate rand;
 
 #[allow(dead_code)] mod day1;
 #[allow(dead_code)] mod day2;
