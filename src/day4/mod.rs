@@ -1,5 +1,4 @@
 use std::collections::HashMap;
-use std::cmp::Ordering;
 use std::fs::File;
 use std::io::prelude::*;
 
@@ -42,7 +41,7 @@ fn decrypt_room(room: &RoomEntry) -> (String, i64) {
 	let shift = (room.digits % 26) as u8;
 	println!("shift ... {}", shift);
 	let out = room.letters.chars().map(|ch| {
-		if (ch == ' ') { ch }
+		if ch == ' ' { ch }
 		else {
 			let alpha = (ch as u8) - 97;      // distance from ascii a
 			let rot   = (alpha + shift) % 26; // restrict shift to alpha
@@ -64,7 +63,7 @@ fn is_valid(room: &RoomEntry) -> bool {
 	// sort histogram by frequency
 	let mut histogram: Vec<_> = histogram.into_iter().collect();
 	histogram.sort_by(|&(ch_a, cnt_a), &(ch_b, cnt_b)| {
-		if (cnt_a == cnt_b) { ch_a.cmp(&ch_b) } // resolve ties alphabetically
+		if cnt_a == cnt_b { ch_a.cmp(&ch_b) } // resolve ties alphabetically
 		else { cnt_b.cmp(&cnt_a) }              // else sort by frequency
 	});
 

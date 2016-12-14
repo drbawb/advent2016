@@ -36,12 +36,9 @@ pub fn exec() {
 
 // parse buf in column major order instead
 fn parse_buf(buf: &str) -> Vec<[i64; 3]> {
-	let mut lines = buf.lines();
-	
 	let lulz: Vec<_> = buf.lines()
 	                      .map(|line| parse_line(&line))
 						  .collect();
-
 
 	let mut tris = vec![];
 	let mut lidx = 0;
