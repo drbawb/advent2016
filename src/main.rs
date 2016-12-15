@@ -7,7 +7,8 @@
 //mod day4;
 //mod day5;
 //mod day6;
-mod day7;
+//mod day7;
+mod day8;
 
 fn main() {
     println!("tis the season to ignore final exams.");
@@ -19,5 +20,6 @@ fn main() {
 	// day4::exec();
 	// day5::exec();
     // day6::exec();
-    day7::exec();
+    // day7::exec();
+	day8::exec();
 }
