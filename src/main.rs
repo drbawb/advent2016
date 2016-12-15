@@ -1,12 +1,13 @@
-extern crate crypto;
-extern crate rand;
+// extern crate crypto;
+// extern crate rand;
 
-#[allow(dead_code)] mod day1;
-#[allow(dead_code)] mod day2;
-#[allow(dead_code)] mod day3;
-#[allow(dead_code)] mod day4;
-#[allow(dead_code)] mod day5;
-#[allow(dead_code)] mod day6;
+//mod day1;
+//mod day2;
+//mod day3;
+//mod day4;
+//mod day5;
+//mod day6;
+mod day7;
 
 fn main() {
     println!("tis the season to ignore final exams.");
@@ -17,5 +18,6 @@ fn main() {
 	// day3::exec();
 	// day4::exec();
 	// day5::exec();
-    day6::exec();
+    // day6::exec();
+    day7::exec();
 }
